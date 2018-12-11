@@ -8,16 +8,4 @@ job("DSLExampleBuild") {
     triggers {
         scm '* * * * *'
     }
- steps {
-        gradle 'assemble'
-    }
-}
-
-job("example-deploy") {
-    parameters {
-        stringParam 'host'
-    }
-    steps {
-        shell 'scp war file; restart...'
-    }
 }
