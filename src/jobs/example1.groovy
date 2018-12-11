@@ -5,7 +5,7 @@ folder(basePath) {
     description 'This example shows basic folder/job creation.'
 }
 
-job("$basePath/DSLExampleBuild") {
+job("DSLExampleBuild") {
     scm {
         github repo
     }
