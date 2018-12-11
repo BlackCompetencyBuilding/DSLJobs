@@ -1,7 +1,7 @@
 
 String repo = 'BlackCompetencyBuilding/DSLJobs'
 
-job("ExampleBuild") {
+job("DSLExampleBuild") {
     scm {
         github repo
     }
