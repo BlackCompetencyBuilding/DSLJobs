@@ -12,5 +12,8 @@ job("$basePath/DSLExampleBuild") {
     triggers {
         scm '* * * * *'
     }
+     steps {
+        gradle 'assemble'
+    }
     
 }
