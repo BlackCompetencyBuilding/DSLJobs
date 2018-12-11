@@ -12,5 +12,16 @@ job("$basePath/DSLExampleBuild") {
     triggers {
         scm '* * * * *'
     }
-    
+ steps {
+        gradle 'assemble'
+    }
+}
+
+job("$basePath/example-deploy") {
+    parameters {
+        stringParam 'host'
+    }
+    steps {
+        shell 'scp war file; restart...'
+    }
 }
