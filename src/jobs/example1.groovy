@@ -1,11 +1,7 @@
 
-String basePath = 'DSLexample'
 String repo = 'https://github.com/BlackCompetencyBuilding/DSLJobs.git'
-folder('basePath') {
-    description 'This example shows basic folder/job creation.'
-}
 
-job("$basePath/DSLExampleBuild") {
+job("DSLExampleBuild") {
     scm {
         github repo
     }
@@ -17,7 +13,7 @@ job("$basePath/DSLExampleBuild") {
     }
 }
 
-job("basePath/example-deploy") {
+job("example-deploy") {
     parameters {
         stringParam 'host'
     }
